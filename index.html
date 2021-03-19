@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Intro to the DOM</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            alert('you are now working with jquery');
+
+            $('#hide').click(function(){
+                $('p').hide();
+            })
+
+            $('#show').click(function(){
+                $('p').show();
+            })
+
+
+
+            $('h1').hover(function(){
+                $('h1').text('MWUAHAHAHA i HAVE CHANGED!@#$')
+            }, function(){$('h1').text('What I have learned at Coding Dojo')})
+
+
+            $('.happy').mousedown(function(){
+                $('.result').append('<h3>The almighty comes for thee!</h3>');
+                $('button').css('background-color', 'green')
+            })
+
+            $('.happy').mouseup(function(){
+                $('.result').append('<h3>The almighty comes for thee!</h3>');
+                $('button').css('background-color', 'white')
+            })
+        })
+    
+    </script>
+  </head>
+  <body>
+    <h1>What I have learned at Coding Dojo</h1>
+    <ul id="topics">
+      <li class="subtopics">HTML</li>
+      <li class="subtopics">CSS</li>
+      <li class="subtopics">JavaScript</li>
+      <li class="subtopics">Git</li>
+    </ul>
+    <button id='hide'>Hide me!</button>
+    <button id='show'>Reveal!</button>
+    <p>This is the best class ever</p>
+    <p>or is it?</p>
+
+    <button class="happy">Booyah!</button>
+    <div class="result"></div>
+  </body>
+</html>
